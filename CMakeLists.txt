@@ -18,6 +18,8 @@ endif()
 set(QT_COMPONENTS Core Network)
 set(QT_LIBRARIES Qt${QT_DEFAULT_MAJOR_VERSION}::Core Qt${QT_DEFAULT_MAJOR_VERSION}::Network)
 
+set(QAPPLICATION_CLASS QGuiApplication CACHE STRING "Inheritance class for SingleApplication")
+
 if(QAPPLICATION_CLASS STREQUAL QApplication)
     list(APPEND QT_COMPONENTS Widgets)
     list(APPEND QT_LIBRARIES Qt${QT_DEFAULT_MAJOR_VERSION}::Widgets)
